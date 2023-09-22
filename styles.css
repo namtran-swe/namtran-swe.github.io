@@ -67,8 +67,16 @@
   color: white;
 }
 
+main {
+  position: relative;
+  display: block;
+  min-width: 505px;
+  overflow-x: hidden;
+}
+
 .wrapper {
     position: relative;
+    display: block;
 }
 
 #home {
@@ -136,25 +144,6 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 1120px) {
-  .flex-parent {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #home {
-    height: 950px;
-  }
-
-  #welcome-section {
-    margin: 25px 100px;
-  }
-
-  #aboutme-bio {
-    margin: 5% 2% 5%
-  }
-}
-
 #aboutme {
   position: relative;
   display: block;
@@ -163,7 +152,6 @@
 #aboutme-bio {
   position: relative;
   margin: 5% 2% 10%;
-  min-width: 500px;
   max-width: 50%;
   font-size: 20px;
   overflow: hidden;
@@ -216,4 +204,34 @@
   display: inline-block;
   margin: 5rem 5rem 8rem;
   font-size: 20px;
+}
+
+@media screen and (max-width: 1120px) {
+  .flex-parent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #home {
+    height: 950px;
+  }
+
+  #welcome-section {
+    margin: 25px 100px;
+  }
+
+  #aboutme-bio {
+    margin: 5% 2% 5%
+  }
+}
+
+@media all and (max-width: 665px) {
+  #navbar a {
+    padding-right: 25px;
+  }
+
+  #aboutme-bio {
+    font-size: 18px;    
+    max-width: 75%;
+  }
 }
