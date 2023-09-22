@@ -67,10 +67,10 @@
   color: white;
 }
 
-main {
+body {
   position: relative;
   display: block;
-  min-width: 505px;
+  min-width: 510px;
   overflow-x: hidden;
 }
 
@@ -226,6 +226,11 @@ main {
 }
 
 @media all and (max-width: 665px) {
+  #navbar {
+    height: 30px;
+    padding: 25px 0 10px;
+  }
+
   #navbar a {
     padding-right: 25px;
   }
