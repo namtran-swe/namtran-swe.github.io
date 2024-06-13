@@ -1,4 +1,0 @@
-var
- aboutMeBio = 'In simple terms, I am a software engineer. I have a background in both backend and frontend work, but my passion for technology and helping people led me to where I am today, which is focusing on shaping myself to be the best front end developer that I can be. My drive to always provide the best and most accessible services made this niche seem like the right fit for me. Currently, I am looking for my first role as a front end software engineer to get the ball rolling on this next phase of my career!<br><br>As for my personal life, I graduated from Arizona State University in 2019 with a Bachelor\'s in Computer Science. To get away from the desk I like to engage in photography, basketball, weight training, and PC building!'
-
-document.getElementById('aboutme-bio').innerHTML = aboutMeBio;
