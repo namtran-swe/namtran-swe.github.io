@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 
+:root {
+    --eerie-black: #1F2421;
+    --caribbean-current: #216869;
+    --tiffany-blue: #83C6C7;
+    --jungle-green: #49A078;
+    --cambridge-blue: #9CC5A1;
+    --platinum: #DCE1DE;
+
+    --lime-green: #00D712;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,11 +26,11 @@ a {
 }
 
 a:hover {
-    color: green;
+    color: var(--lime-green);
 }
 
 body {
-    background: gray;
+    background: var(--eerie-black);
     padding: 20px;
     animation: fadeInAnimation ease 2s;
 }
@@ -32,8 +43,8 @@ nav {
 nav .logo {
     height: 64px;
     width: 64px;
-    background: black;
-    border: 1px solid #fff;
+    background: var(--eerie-black);
+    border: 1px solid var(--platinum);
     border-radius: 48px;
     display: flex;
     align-items: center;
@@ -42,7 +53,7 @@ nav .logo {
 
 nav .logo {
     font-size: 26px;
-    color: green;
+    color: var(--lime-green);
 }
 
 nav .links {
@@ -52,7 +63,7 @@ nav .links {
     justify-content: space-between;
     width: 100%;
     padding: 0 66px;
-    background: black;
+    background: var(--eerie-black);
     border: 1px solid #fff;
     border-radius: 48px;
 }
@@ -63,7 +74,7 @@ nav .links a {
 
 nav .links a.active {
     font-weight: bold;
-    color: green;
+    color: var(--lime-green);
 }
 
 .about {
@@ -71,14 +82,14 @@ nav .links a.active {
     align-items: center;
     justify-content: space-between;
     padding: 60px 42px;
-    background: gray;
-    border: 1px solid black;
+    background: var(--eerie-black);
+    border: 1px solid var(--platinum);
     border-radius: 14px;
     margin-top: 20px;
 }
 
 .about .left h3 {
-    color: lightgray;
+    color: #fff;
     font-size: 24px;
     font-weight: 400;
 }
@@ -98,7 +109,7 @@ nav .links a.active {
 
 .about .left .info p {
     font-size: 20px;
-    color: lightgray;
+    color: #fff;
 }
 
 .about .left .info .buttons {
@@ -120,21 +131,21 @@ nav .links a.active {
 .about .left .info .buttons button.hire {
     color: #fff;
     background: green;
-    border: 1px solid black;
+    border: 1px solid var(--platinum);
 }
 
 .about .left .info .buttons button.hire:hover {
-    background: darkgreen;
+    background: var(--jungle-green);
 }
 
 .about .left .info .buttons button.email {
-    color: lightgrey;
-    border: 1px solid gray;
-    background: navy;
+    color: #fff;
+    border: 1px solid var(--platinum);
+    background: var(--caribbean-current);
 }
 
 .about .left .info .buttons button.email:hover {
-    background: black;
+    background: var(--tiffany-blue);
 }
 
 .about .right a.online, footer a.online {
@@ -143,7 +154,7 @@ nav .links a.active {
     justify-content: center;
     gap: 10px;
     background: black;
-    border: 1px solid gray;
+    border: 1px solid var(--platinum);
     padding: 4px 15px;
     border-radius: 14px;
     font-size: 13px;
@@ -158,8 +169,9 @@ nav .links a.active {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: 8px solid gray;
-    object-fit: 70px;
+    border: 2px solid var(--platinum);
+    object-fit: cover;
+    margin-top: 10px;
 }
 
 .works {
@@ -170,14 +182,14 @@ nav .links a.active {
 
 .works .left {
     flex: 1;
-    background: gray;
+    background: var(--eerie-black);
     padding: 60px 40px;
     border-radius: 14px;
-    border: 1px solid black;
+    border: 1px solid var(--platinum);
 }
 
 .works .left h3 {
-    color: lightgray;
+    color: white;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -209,18 +221,18 @@ nav .links a.active {
 }
 
 .works .left .works-list .item .work-info h5.active {
-    color: green;
+    color: var(--lime-green);
 }
 
 .works .left .works-list .item .work-info p {
     margin-top: 12px;
-    color: black;
+    color: var(--platinum);
     font-size: 20px;
 }
 
 .works .left .works-list .item > p {
     font-size: 20px;
-    color: black;
+    color: var(--platinum);
 }
 
 .works .right {
@@ -241,15 +253,15 @@ nav .links a.active {
     justify-content: center;
     gap: 30px;
     padding: 20px;
-    background: gray;
-    border: 1px solid black;
+    background: var(--eerie-black);
+    border: 1px solid var(--platinum);
     border-radius: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .works .right .item:hover {
-    color: green;
+    color: var(--lime-green);
 }
 
 .works .right .item a {
@@ -258,7 +270,7 @@ nav .links a.active {
 }
 
 .works .right .item > p {
-    color: lightgray;
+    color: var(--platinum);
     font-size: 17px;
     line-height: 26px;
 }
@@ -280,8 +292,8 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: gray;
-    border: 1px solid black;
+    background: var(--eerie-black);
+    border: 1px solid var(--platinum);
     padding: 45px;
     border-radius: 14px;
 }
