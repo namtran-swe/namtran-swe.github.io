@@ -1,4 +1,31 @@
-var
- aboutMeBio = 'In simple terms, I am a software engineer. I have a background in both backend and frontend work, but my passion for technology and helping people led me to where I am today, which is focusing on shaping myself to be the best front end developer that I can be. My drive to always provide the best and most accessible services made this niche seem like the right fit for me. Currently, I am looking for my first role as a front end software engineer to get the ball rolling on this next phase of my career!<br><br>As for my personal life, I graduated from Arizona State University in 2019 with a Bachelor\'s in Computer Science. To get away from the desk I like to engage in photography, basketball, weight training, and PC building!'
+const hire = document.querySelector(".hire");
+const email = document.querySelector(".email");
+const resume = document.querySelector(".resume");
 
-document.getElementById('aboutme-bio').innerHTML = aboutMeBio;
+hire.addEventListener("click", handleHireClick);
+email.addEventListener("click", handleEmailClick);
+resume.addEventListener("click", handleResumeClick);
+
+function handleHireClick() {
+    const url = "https://www.linkedin.com/in/namtran-swe";
+
+    window.open(url, '_blank');
+}
+
+function handleEmailClick() {
+    navigator.clipboard.writeText("namtran.swe@gmail.com");
+
+    alert("Copied Email!");
+}
+
+function handleResumeClick() {
+    const resumeUrl = "https://drive.google.com/uc?export=download&id=1h6pu3kth2zKauX2ms-altggbkk0AFy-Y";
+    const a = document.createElement('a');
+    a.href = resumeUrl;
+    a.download = 'Nam_Tran_Resume.docx';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+
+    alert("Thank you. Please check your Downloads.");
+}
