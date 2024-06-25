@@ -138,13 +138,15 @@ nav .links a.active {
     background: var(--jungle-green);
 }
 
-.about .left .info .buttons button.email {
+.about .left .info .buttons button.email,
+.about .left .info .buttons button.resume {
     color: #fff;
     border: 1px solid var(--platinum);
     background: var(--caribbean-current);
 }
 
-.about .left .info .buttons button.email:hover {
+.about .left .info .buttons button.email:hover,
+.about .left .info .buttons button.resume:hover {
     background: var(--tiffany-blue);
 }
 
