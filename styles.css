@@ -19,6 +19,14 @@
     font-family: "Open Sans", sans-serif;
 }
 
+.desktop-content {
+    display: block;
+}
+
+.mobile-content {
+    display: none;
+}
+
 a {
     text-decoration: none;
     color: #fff;
@@ -62,7 +70,7 @@ nav .links {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0 66px;
+    padding: 0 95px;
     background: var(--eerie-black);
     border: 1px solid #fff;
     border-radius: 48px;
@@ -254,7 +262,7 @@ nav .links a.active {
     flex-direction: column;
     justify-content: center;
     gap: 30px;
-    padding: 20px;
+    padding: 35px 25px;
     background: var(--eerie-black);
     border: 1px solid var(--platinum);
     border-radius: 14px;
@@ -289,6 +297,10 @@ nav .links a.active {
     font-size: 15px;
 }
 
+.works .left .works-list .item > p {
+    text-align: right;
+}
+
 footer {
     margin-top: 20px;
     display: flex;
@@ -308,7 +320,7 @@ footer > a {
 footer .socials {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 25px;
 }
 
 footer .socials a {
@@ -402,17 +414,100 @@ footer .socials a {
         margin-top: 40px;
     }
 
+    .works .left .works-list .item .work-info {
+        max-width: 320px;
+    }
+
     .works .left .works-list .item .work-info h5,
     .works .right .item a {
         font-size: 20px;
     }
 
     .works .right .item > p,
-    l.works .right .item:not(:first-child) a {
+    .works .right .item:not(:first-child) a {
         font-size: 14px;
     }
 
     .works .right .item:not(:first-child) p {
         font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav .links {
+        padding: 0 30px;
+    }
+
+    .about .left h3 {
+        font-size: 18px;
+    }
+
+    .about .left .info {
+        margin: 20px 0 0;
+    }
+
+    .about .left .info h2 {
+        font-size: 26px;
+    }
+
+    .about .left .info .buttons button {
+        font-size: 13px;
+    }
+
+    .works .left,
+    .works .right .item:first-child {
+        padding: 38px 28px;
+    }
+
+    .works .left .works-list .item .work-info {
+        max-width: 175px;
+    }
+
+    .works .left h3,
+    .works .right .item:first-child a {
+        font-size: 18px;
+    }
+
+    .works .left .works-list .item .work-info h5 {
+        font-size: 15px;
+    }
+
+    .about .left .info p,
+    .works .left .works-list .item .work-info p,
+    .works .left .works-list .item p {
+        font-size: 13px;
+    }
+
+    .works .left .works-list .item > p {
+        max-width: 130px;
+    }
+
+    .works .right .item.item:not(:first-child) {
+        padding: 30px 25px;
+    }
+
+    .works .right .item > p,
+    .works .right .item:not(:first-child) a {
+        font-size: 13px;
+    }
+
+    .works .right .item:not(:first-child) p {
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width: 415px) {
+    nav .links {
+        padding: 0 25px;
+        font-size: 15px;
+    }
+
+    .desktop-content {
+        display: none;
+    }
+
+    .mobile-content {
+        display: block;
     }
 }
