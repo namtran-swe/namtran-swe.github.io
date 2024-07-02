@@ -1,10 +1,20 @@
-const hire = document.querySelector(".hire");
-const email = document.querySelector(".email");
-const resume = document.querySelector(".resume");
+if (window.location.href.includes('index.html')) {
+    const hire = document.querySelector(".hire");
+    const email = document.querySelector(".email");
+    const resume = document.querySelector(".resume");
 
-hire.addEventListener("click", handleHireClick);
-email.addEventListener("click", handleEmailClick);
-resume.addEventListener("click", handleResumeClick);
+    hire.addEventListener("click", handleHireClick);
+    email.addEventListener("click", handleEmailClick);
+    resume.addEventListener("click", handleResumeClick);
+}
+
+if (window.location.href.includes('contact.html')) {
+    const emailContact = document.querySelector("#email-contact");
+    const phoneContact = document.querySelector("#phone-contact");
+
+    emailContact.addEventListener("click", handleEmailClick);
+    phoneContact.addEventListener("click", handlePhoneClick);
+}
 
 function handleHireClick() {
     const url = "https://www.linkedin.com/in/namtran-swe";
@@ -16,6 +26,12 @@ function handleEmailClick() {
     navigator.clipboard.writeText("namtran.swe@gmail.com");
 
     alert("Copied Email!");
+}
+
+function handlePhoneClick() {
+    navigator.clipboard.writeText("7144173072");
+
+    alert("Copied Phone Number!");
 }
 
 function handleResumeClick() {
