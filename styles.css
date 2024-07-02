@@ -184,6 +184,40 @@ nav .links a.active {
     margin-top: 10px;
 }
 
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 42px;
+    background: var(--eerie-black);
+    border: 1px solid var(--platinum);
+    border-radius: 14px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.contact .contact-picture img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 2px solid var(--platinum);
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+.contact h2 {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.contact p {
+    font-size: 20px;
+    color: #fff;
+}
+
 .works {
     display: flex;
     gap: 20px;
@@ -245,7 +279,8 @@ nav .links a.active {
     color: var(--platinum);
 }
 
-.works .right {
+.works .right,
+.methods {
     flex: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -257,7 +292,8 @@ nav .links a.active {
     grid-column: span 2;
 }
 
-.works .right .item {
+.works .right .item,
+.methods .item {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -270,13 +306,20 @@ nav .links a.active {
     transition: all 0.3s ease;
 }
 
-.works .right .item:hover {
+.works .right .item:hover,
+.methods .item .non-link:hover {
     color: var(--lime-green);
 }
 
-.works .right .item a {
+.works .right .item a,
+.methods .item a,
+.methods .item .non-link {
     font-size: 24px;
     font-weight: 500;
+}
+
+.methods .item .non-link {
+    color: #fff;
 }
 
 .works .right .item > p {
@@ -347,12 +390,13 @@ footer .socials a {
     }
 
     .works .left, 
-    .works .right .item, 
+    .works .right .item,
     footer {
         padding: 40px 30px;
     }
 
-    .works .right {
+    .works .right,
+    .methods {
         grid-template-rows: auto auto;
     }
 }
@@ -360,6 +404,11 @@ footer .socials a {
 @media screen and (max-width: 992px) {
     nav .links {
         padding: 0 40px;
+    }
+
+    .methods .item a,
+    .methods .item .non-link {
+        font-size: 22px;
     }
 
     footer > a {
@@ -388,6 +437,11 @@ footer .socials a {
 
     .about .right img {
         margin-top: 20px;
+    }
+
+    .methods .item a,
+    .methods .item .non-link {
+        font-size: 18px;
     }
 
     footer {
@@ -430,6 +484,31 @@ footer .socials a {
 
     .works .right .item:not(:first-child) p {
         font-size: 13px;
+    }
+
+    .methods {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .methods > :nth-child(-n+2) {
+        flex: 1;
+        flex-direction: row;
+    }
+
+    .methods > :nth-last-child(-n+2) {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .methods .item .non-link {
+        min-width: 355px;
+    }
+
+    .methods .item a,
+    .methods .item .non-link {
+        font-size: 20px;
     }
 }
 
@@ -494,6 +573,10 @@ footer .socials a {
     .works .right .item:not(:first-child) p {
         font-size: 12px;
     }
+
+    .methods .item .non-link {
+        min-width: 250px;
+    }
 }
 
 
@@ -501,6 +584,20 @@ footer .socials a {
     nav .links {
         padding: 0 25px;
         font-size: 15px;
+    }
+
+    .contact .contact-picture img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .methods .item a,
+    .methods .item .non-link {
+        font-size: 16px;
+    }
+
+    .methods .item .non-link {
+        min-width: 200px;
     }
 
     .desktop-content {
