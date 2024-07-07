@@ -85,7 +85,8 @@ nav .links a.active {
     color: var(--lime-green);
 }
 
-.about {
+.about,
+.intro {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -109,23 +110,34 @@ nav .links a.active {
     gap: 20px;
 }
 
-.about .left .info h2 {
+.intro .left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 75%;
+}
+
+.about .left .info h2,
+.intro .left h2 {
     font-size: 36px;
     color: #fff;
     font-weight: 500;
 }
 
-.about .left .info p {
+.about .left .info p,
+.intro .left p {
     font-size: 20px;
     color: #fff;
 }
 
-.about .left .info .buttons {
+.about .left .info .buttons,
+.container .portfolio .port-item .item-buttons {
     display: flex;
     gap: 14px;
 }
 
-.about .left .info .buttons button {
+.about .left .info .buttons button,
+.container .portfolio .port-item .item-buttons button {
     font-size: 16px;
     padding: 6px 10px;
     border-radius: 7px;
@@ -136,29 +148,34 @@ nav .links a.active {
     transition: all 0.3s ease;
 }
 
-.about .left .info .buttons button.hire {
+.about .left .info .buttons button.hire,
+.container .portfolio .port-item .item-buttons button.source {
     color: #fff;
     background: green;
     border: 1px solid var(--platinum);
 }
 
-.about .left .info .buttons button.hire:hover {
+.about .left .info .buttons button.hire:hover,
+.container .portfolio .port-item .item-buttons button.source:hover {
     background: var(--jungle-green);
 }
 
 .about .left .info .buttons button.email,
-.about .left .info .buttons button.resume {
+.about .left .info .buttons button.resume,
+.container .portfolio .port-item .item-buttons button.expand {
     color: #fff;
     border: 1px solid var(--platinum);
     background: var(--caribbean-current);
 }
 
 .about .left .info .buttons button.email:hover,
-.about .left .info .buttons button.resume:hover {
+.about .left .info .buttons button.resume:hover,
+.container .portfolio .port-item .item-buttons button.expand:hover {
     background: var(--tiffany-blue);
 }
 
-.about .right a.online, footer a.online {
+.about .right a.online,
+footer a.online {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -170,9 +187,22 @@ nav .links a.active {
     font-size: 13px;
 }
 
-.about .right a.online i, footer a.online i {
+.about .right a.online i,
+footer a.online i {
     color: green;
     font-size: 9px;
+}
+
+.intro .right a.online {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: black;
+    border: 1px solid var(--platinum);
+    padding: 10px 30px;
+    border-radius: 14px;
+    font-size: 16px;
 }
 
 .about .right img {
@@ -182,6 +212,75 @@ nav .links a.active {
     border: 2px solid var(--platinum);
     object-fit: cover;
     margin-top: 10px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 60px 30px;
+    background: var(--eerie-black);
+    border: 1px solid var(--platinum);
+    border-radius: 14px;
+    margin-top: 20px;
+}
+
+.container .portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 120px;
+}
+
+.container .portfolio .port-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 0px 20px;
+    max-width: 300px;
+    background: var(--eerie-black);
+    border: 1px solid var(--platinum);
+    border-radius: 14px;
+    box-shadow: 0 5px 32px var(--caribbean-current);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container .portfolio .port-item img {
+    width: 100%;
+    height: 300px;
+    border: 2px solid var(--platinum);
+    border-radius: 14px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.container .portfolio .port-item .item-info {
+    color: #fff;
+    margin-top: 15px;
+    padding: 0 18px;
+}
+
+.container .portfolio .port-item .item-info p {
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+.container .portfolio .port-item .item-buttons {
+    margin-top: 35px;
+    padding: 0 18px;
+}
+
+.container .portfolio .port-item .item-buttons button {
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .contact {
@@ -572,6 +671,16 @@ footer .socials a {
 
     .works .right .item:not(:first-child) p {
         font-size: 12px;
+    }
+
+    .contact h2 {
+        font-size: 28px;
+        padding: 10px;
+    }
+
+    .contact p {
+        font-size: 16px;
+        padding: 10px;
     }
 
     .methods .item .non-link {

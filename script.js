@@ -8,12 +8,36 @@ if (window.location.href.includes('index.html')) {
     resume.addEventListener("click", handleResumeClick);
 }
 
+if (window.location.href.includes('portfolio.html')) {
+    const firstCodeLink = document.querySelector("#first-source");
+    const secondCodeLink = document.querySelector("#second-source");
+    const thirdCodeLink = document.querySelector("#third-source");
+
+    firstCodeLink.addEventListener("click", () => {
+        url = "https://github.com/namtran-swe/100-Days-of-JavaScript/tree/main/4_QR_Code_Generator";
+        window.open(url, '_blank');
+    });
+
+    secondCodeLink.addEventListener("click", () => {
+        url = "https://github.com/namtran-swe/100-Days-of-JavaScript/tree/main/3_Password_Generator";
+        window.open(url, '_blank');
+    });
+
+    thirdCodeLink.addEventListener("click", () => {
+        url = "https://github.com/namtran-swe/100-Days-of-JavaScript/tree/main/1_Pixel_Art_Generator";
+        window.open(url, '_blank');
+    });
+}
+
 if (window.location.href.includes('contact.html')) {
     const emailContact = document.querySelector("#email-contact");
     const phoneContact = document.querySelector("#phone-contact");
 
     emailContact.addEventListener("click", handleEmailClick);
-    phoneContact.addEventListener("click", handlePhoneClick);
+    phoneContact.addEventListener("click", () => {
+        navigator.clipboard.writeText("7144173072");
+        alert("Copied Phone Number!");
+    });
 }
 
 function handleHireClick() {
@@ -26,12 +50,6 @@ function handleEmailClick() {
     navigator.clipboard.writeText("namtran.swe@gmail.com");
 
     alert("Copied Email!");
-}
-
-function handlePhoneClick() {
-    navigator.clipboard.writeText("7144173072");
-
-    alert("Copied Phone Number!");
 }
 
 function handleResumeClick() {
