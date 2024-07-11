@@ -13,6 +13,10 @@ if (window.location.href.includes('portfolio.html')) {
     const secondCodeLink = document.querySelector("#second-source");
     const thirdCodeLink = document.querySelector("#third-source");
 
+    const firstExpand = document.querySelector("#expand-first");
+    const secondExpand = document.querySelector("#expand-second");
+    const thirdExpand = document.querySelector("#expand-third");
+
     firstCodeLink.addEventListener("click", () => {
         url = "https://github.com/namtran-swe/100-Days-of-JavaScript/tree/main/4_QR_Code_Generator";
         window.open(url, '_blank');
@@ -26,6 +30,21 @@ if (window.location.href.includes('portfolio.html')) {
     thirdCodeLink.addEventListener("click", () => {
         url = "https://github.com/namtran-swe/100-Days-of-JavaScript/tree/main/1_Pixel_Art_Generator";
         window.open(url, '_blank');
+    });
+
+    firstExpand.addEventListener("click", () => {
+        var element = document.getElementById("proj-desc-1");
+        expandDesc(element, firstExpand);
+    });
+
+    secondExpand.addEventListener("click", () => {
+        var element = document.getElementById("proj-desc-2");
+        expandDesc(element, secondExpand);
+    });
+
+    thirdExpand.addEventListener("click", () => {
+        var element = document.getElementById("proj-desc-3");
+        expandDesc(element, thirdExpand);
     });
 }
 
@@ -62,4 +81,16 @@ function handleResumeClick() {
     document.body.removeChild(a);
 
     alert("Thank you. Please check your Downloads.");
+}
+
+function expandDesc(element, button) {
+    if (element.classList.contains('shorten')) {
+        element.classList.remove('shorten');
+        element.classList.add('show-all');
+        button.innerHTML = "Minimize " + `<i class="fa-solid fa-minimize"></i>`;
+    } else {
+        element.classList.remove('show-all');
+        element.classList.add('shorten');
+        button.innerHTML = "Expand " + `<i class="fa-solid fa-expand"></i>`;
+    }
 }

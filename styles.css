@@ -27,6 +27,24 @@
     display: none;
 }
 
+.show-all {
+    display: block;
+    text-overflow: clip;
+    overflow: visible;
+    margin-top: 20px;
+}
+
+.shorten {
+    margin-top: 20px;
+    font-size: 13px;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+}
+
 a {
     text-decoration: none;
     color: #fff;
@@ -114,7 +132,7 @@ nav .links a.active {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width: 75%;
+    max-width: 80%;
 }
 
 .about .left .info h2,
@@ -218,63 +236,76 @@ footer a.online i {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 60px 30px;
+    /*padding: 60px 30px;*/
     background: var(--eerie-black);
-    border: 1px solid var(--platinum);
+    /*border: 1px solid var(--platinum);
     border-radius: 14px;
-    margin-top: 20px;
+    margin-top: 20px;*/
 }
 
 .container .portfolio {
-    display: flex;
+    display: block;
     align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    gap: 120px;
 }
 
 .container .portfolio .port-item {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0px 0px 20px;
-    max-width: 300px;
+    flex-direction: row;
+    justify-content: space-between;
     background: var(--eerie-black);
     border: 1px solid var(--platinum);
     border-radius: 14px;
+    margin: 50px auto;
+    width: 90%;
     box-shadow: 0 5px 32px var(--caribbean-current);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .container .portfolio .port-item img {
-    width: 100%;
-    height: 300px;
+    width: 400px;
+    height: 100%;
     border: 2px solid var(--platinum);
     border-radius: 14px;
     object-fit: cover;
     object-position: top;
 }
 
-.container .portfolio .port-item .item-info {
-    color: #fff;
-    margin-top: 15px;
-    padding: 0 18px;
+.container .portfolio .port-item .desc-col {
+    display: flex;
+    flex-direction: column;
 }
 
-.container .portfolio .port-item .item-info p {
-    margin-top: 20px;
-    font-size: 13px;
+.container .portfolio .port-item .desc-col .item-info {
+    color: #fff;
+    margin-top: 30px;
+    padding: 0 45px;
+}
+
+.container .portfolio .port-item .desc-col .item-info h4 {
+    font-size: 30px;
+}
+
+.container .portfolio .port-item .desc-col .item-info p:first-of-type {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.container .portfolio .port-item .desc-col .item-info p:last-of-type {
+    font-size: 16px;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--lime-green);
+    margin-top: 25px;
 }
 
 .container .portfolio .port-item .item-buttons {
-    margin-top: 35px;
-    padding: 0 18px;
+    margin: auto 45px 35px auto;
 }
 
 .container .portfolio .port-item .item-buttons button {
-    font-size: 14px;
-    padding: 6px 10px;
+    font-size: 18px;
+    padding: 10px 14px;
     border-radius: 7px;
     display: flex;
     align-items: center;
@@ -498,6 +529,29 @@ footer .socials a {
     .methods {
         grid-template-rows: auto auto;
     }
+
+    .container .portfolio .port-item img {
+        width: 300px;
+        height: 100%;
+    }
+
+    .container .portfolio .port-item .desc-col .item-info h4 {
+        font-size: 24px;
+    }
+
+    .container .portfolio .port-item .desc-col .item-info p:first-of-type {
+        font-size: 16px;
+        font-weight: 200;
+    }
+
+    .container .portfolio .port-item .desc-col .item-info p:last-of-type {
+        font-size: 14px;
+    }
+
+    .container .portfolio .port-item .item-buttons button {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -530,6 +584,15 @@ footer .socials a {
         padding: 30px;
     }
 
+    .intro {
+        padding: 20px;
+    }
+
+    .intro .left h2,
+    .intro .left p {
+        margin-top: 10px;
+    }
+
     .about .left .info {
         margin-top: 30px;
     }
@@ -543,19 +606,44 @@ footer .socials a {
         font-size: 18px;
     }
 
+    .intro {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .shorten {
+        -webkit-line-clamp: 5;
+        line-clamp: 5;
+    }
+
+    .container .portfolio .port-item {
+        flex-direction: column;
+    }
+
+    .container .portfolio .port-item img {
+        height: 400px;
+        width: 100%;
+    }
+
+    .container .portfolio .port-item .item-buttons {
+        margin: 50px 45px 35px auto;
+    }
+
     footer {
         display: none;
     }
 }
 
 @media screen and (max-width: 576px) {
-    .about .left .info h2 {
+    .about .left .info h2,
+    .intro .left h2 {
         font-size: 30px;
     }
 
     .about .left .info p,
     .works .left .works-list .item .work-info p,
-    .works .left .works-list .item > p {
+    .works .left .works-list .item > p,
+    .intro .left p {
         font-size: 16px;
     }
 
@@ -685,6 +773,18 @@ footer .socials a {
 
     .methods .item .non-link {
         min-width: 250px;
+    }
+
+    .container .portfolio .port-item .desc-col .item-info h4 {
+        font-size: 20px;
+    }
+
+    .container .portfolio .port-item .desc-col .item-info p:first-of-type {
+        font-size: 14px;
+    }
+
+    .container .portfolio .port-item .desc-col .item-info p:last-of-type {
+        font-size: 12px;
     }
 }
 
