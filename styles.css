@@ -548,6 +548,10 @@ footer .socials a {
         font-size: 14px;
     }
 
+    .container .portfolio .port-item .item-buttons {
+        padding-top: 30px;
+    }
+
     .container .portfolio .port-item .item-buttons button {
         font-size: 14px;
         padding: 6px 10px;
@@ -562,6 +566,15 @@ footer .socials a {
     .methods .item a,
     .methods .item .non-link {
         font-size: 22px;
+    }
+
+    .shorten {
+        -webkit-line-clamp: 4;
+        line-clamp: 4;
+    }
+
+    .intro .left {
+        max-width: 75%;
     }
 
     footer > a {
@@ -611,6 +624,10 @@ footer .socials a {
         gap: 40px;
     }
 
+    .intro .left {
+        max-width: 85%;
+    }
+
     .shorten {
         -webkit-line-clamp: 5;
         line-clamp: 5;
@@ -627,6 +644,7 @@ footer .socials a {
 
     .container .portfolio .port-item .item-buttons {
         margin: 50px 45px 35px auto;
+        padding-top: 0;
     }
 
     footer {
@@ -809,11 +827,24 @@ footer .socials a {
         min-width: 200px;
     }
 
+    .container .portfolio .port-item .desc-col .item-info {
+        padding: 0 35px;
+    }
+
+    .container .portfolio .port-item .item-buttons button {
+        font-size: 13px;
+    }
+
     .desktop-content {
         display: none;
     }
 
     .mobile-content {
         display: block;
+    }
+
+    .shorten {
+        -webkit-line-clamp: 6;
+        line-clamp: 6;
     }
 }
