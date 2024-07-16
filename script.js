@@ -12,22 +12,29 @@ if (window.location.href.includes('portfolio.html')) {
     const firstCodeLink = document.querySelector("#first-source");
     const secondCodeLink = document.querySelector("#second-source");
     const thirdCodeLink = document.querySelector("#third-source");
+    const fourthCodeLink = document.querySelector("#fourth-source");
 
     const firstExpand = document.querySelector("#expand-first");
     const secondExpand = document.querySelector("#expand-second");
     const thirdExpand = document.querySelector("#expand-third");
+    const fourthExpand = document.querySelector("#expand-fourth");
 
     firstCodeLink.addEventListener("click", () => {
-        url = "https://github.com/namtran-swe/100-Days-of-JavaScript/tree/main/4_QR_Code_Generator";
+        url = "https://github.com/namtran-swe/mini-games/tree/main/Tetris";
         window.open(url, '_blank');
     });
 
     secondCodeLink.addEventListener("click", () => {
-        url = "https://github.com/namtran-swe/100-Days-of-JavaScript/tree/main/3_Password_Generator";
+        url = "https://github.com/namtran-swe/100-Days-of-JavaScript/tree/main/4_QR_Code_Generator";
         window.open(url, '_blank');
     });
 
     thirdCodeLink.addEventListener("click", () => {
+        url = "https://github.com/namtran-swe/100-Days-of-JavaScript/tree/main/3_Password_Generator";
+        window.open(url, '_blank');
+    });
+
+    fourthCodeLink.addEventListener("click", () => {
         url = "https://github.com/namtran-swe/100-Days-of-JavaScript/tree/main/1_Pixel_Art_Generator";
         window.open(url, '_blank');
     });
@@ -45,6 +52,11 @@ if (window.location.href.includes('portfolio.html')) {
     thirdExpand.addEventListener("click", () => {
         var element = document.getElementById("proj-desc-3");
         expandDesc(element, thirdExpand);
+    });
+
+    fourthExpand.addEventListener("click", () => {
+        var element = document.getElementById("proj-desc-4");
+        expandDesc(element, fourthExpand);
     });
 }
 

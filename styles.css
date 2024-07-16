@@ -282,16 +282,29 @@ footer a.online i {
     padding: 0 45px;
 }
 
+.container .portfolio .port-item .desc-col .item-info .title-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
 .container .portfolio .port-item .desc-col .item-info h4 {
     font-size: 30px;
 }
 
-.container .portfolio .port-item .desc-col .item-info p:first-of-type {
+.container .portfolio .port-item .desc-col .item-info h5 {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--lime-green);
+}
+
+.container .portfolio .port-item .desc-col .item-info .description p:first-of-type {
     font-size: 20px;
     font-weight: 300;
 }
 
-.container .portfolio .port-item .desc-col .item-info p:last-of-type {
+.container .portfolio .port-item .desc-col .item-info .description p:last-of-type {
     font-size: 16px;
     font-weight: 200;
     font-style: italic;
@@ -539,12 +552,12 @@ footer .socials a {
         font-size: 24px;
     }
 
-    .container .portfolio .port-item .desc-col .item-info p:first-of-type {
+    .container .portfolio .port-item .desc-col .item-info .description p:first-of-type {
         font-size: 16px;
         font-weight: 200;
     }
 
-    .container .portfolio .port-item .desc-col .item-info p:last-of-type {
+    .container .portfolio .port-item .desc-col .item-info .description p:last-of-type {
         font-size: 14px;
     }
 
@@ -575,6 +588,14 @@ footer .socials a {
 
     .intro .left {
         max-width: 75%;
+    }
+
+    .container .portfolio .port-item .desc-col .item-info .title-flex {
+        flex-direction: column;
+    }
+
+    .container .portfolio .port-item .desc-col .item-info h5 {
+        font-size: 14px;
     }
 
     footer > a {
@@ -797,11 +818,11 @@ footer .socials a {
         font-size: 20px;
     }
 
-    .container .portfolio .port-item .desc-col .item-info p:first-of-type {
+    .container .portfolio .port-item .desc-col .item-info .description p:first-of-type {
         font-size: 14px;
     }
 
-    .container .portfolio .port-item .desc-col .item-info p:last-of-type {
+    .container .portfolio .port-item .desc-col .item-info .description p:last-of-type {
         font-size: 12px;
     }
 }
