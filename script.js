@@ -1,4 +1,4 @@
-if (window.location.href.includes('index.html')) {
+if (window.location.href === "https://namtran-swe.github.io/" || window.location.href.includes('index.html')) {
     const hire = document.querySelector(".hire");
     const email = document.querySelector(".email");
     const resume = document.querySelector(".resume");
